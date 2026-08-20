@@ -1,0 +1,36 @@
+<Window x:Class="BimViewerApp.MainWindow"
+        xmlns="http://microsoft.com"
+        xmlns:x="http://microsoft.com"
+        xmlns:hx="http://helix-toolkit.org"
+        Title="BIM Viewer - Helix DirectX11" Height="720" Width="1280">
+    
+    <Grid>
+        <!-- The Main 3D Viewport Space -->
+        <hx:Viewport3DX id="view3D" 
+                        FXAALevel="Two"
+                        IsShadowMapEnabled="True"
+                        ShowCoordinateSystem="True"
+                        CoordinateSystemHorizontalPosition="Left"
+                        CoordinateSystemVerticalPosition="Bottom">
+            
+            <!-- Default Studio Lighting -->
+            <hx:DirectionalLight3D Direction="-1,-1,-1" Color="White"/>
+            <hx:AmbientLight3D Color="#333333"/>
+
+            <!-- Grid Floor for Spatial Reference -->
+            <hx:GridLinesVisual3D SizeX="100" SizeY="100" 
+                                  MajorDistance="10" MinorDistance="1" 
+                                  Thickness="0.1" Color="Gray"/>
+
+            <!-- Dynamic 3D BIM Geometry Group Container -->
+            <hx:GroupModel3D x:Name="BimGroupModel" />
+            
+        </hx:Viewport3DX>
+        
+        <!-- Simple Top-Left Overlay UI for Controls -->
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" Background="#88000000" Padding="15">
+            <TextBlock Text="Tekla-Style Viewer Prototype" Foreground="White" FontWeight="Bold" Margin="0,0,0,10"/>
+            <Button Content="Generate Sample Steel Beam" Click="OnAddBeamClick" Padding="10,5"/>
+        </StackPanel>
+    </Grid>
+</Window>
