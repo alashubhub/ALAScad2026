@@ -3,6 +3,7 @@
         xmlns:x="http://microsoft.com"
         <!-- xmlns:hx="http://helix-toolkit.org" -->
 xmlns:hx="http://helix-toolkit.org/wpf/SharpDX"
+xmlns:helix="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"
 
         Title="BIM Viewer - Helix DirectX11" Height="720" Width="1280">
     
