@@ -3,6 +3,7 @@
         xmlns:x="http://microsoft.com"
         <!-- xmlns:hx="http://helix-toolkit.org" -->
 xmlns:hx="http://helix-toolkit.org/wpf/SharpDX"
+
         Title="BIM Viewer - Helix DirectX11" Height="720" Width="1280">
     
     <Grid>
@@ -25,7 +26,7 @@ xmlns:hx="http://helix-toolkit.org/wpf/SharpDX"
 
             <!-- Dynamic 3D BIM Geometry Group Container -->
             <hx:GroupModel3D x:Name="BimGroupModel" />
-            
+            <hx:Viewport3DX EffectsManager="{Binding MyEffectsManager}">
         </hx:Viewport3DX>
         
         <!-- Simple Top-Left Overlay UI for Controls -->
