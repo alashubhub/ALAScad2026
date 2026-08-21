@@ -1,7 +1,7 @@
 <Window x:Class="BimViewerApp.MainWindow"
         xmlns="http://microsoft.com"
         xmlns:x="http://microsoft.com"
-        <!-- xmlns:hx="http://helix-toolkit.org" -->
+        <!--xmlns:hx="http://helix-toolkit.org"-->
 xmlns:hx="http://helix-toolkit.org/wpf/SharpDX"
 xmlns:helix="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"
 
