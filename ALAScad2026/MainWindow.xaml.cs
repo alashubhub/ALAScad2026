@@ -49,7 +49,7 @@ namespace ALAScad2026
             {
                 Position = new System.Windows.Media.Media3D.Point3D(30, 30, 30),
                 LookDirection = new System.Windows.Media.Media3D.Vector3D(-30, -30, -30),
-                UpDirection = new System.Windows.Media.Media3D.Vector3D(0, 1, 0),
+                UpDirection = new System.Windows.Media.Media3D.Vector3D(0, 0, 1),
                 Width = 40
             };
 
@@ -107,6 +107,15 @@ namespace ALAScad2026
                 indices.Add(indexCounter++);
                 indices.Add(indexCounter++);
             }
+
+            // Draw lines along the Z axis
+            //for (int i = -size; i <= size; i += spacing)
+            //{
+            //    positions.Add(new Vector3(-size, 0, i));
+            //    positions.Add(new Vector3(size, 0, i));
+            //    indices.Add(indexCounter++);
+            //    indices.Add(indexCounter++);
+            //}
 
             // Draw lines along the Z axis
             for (int i = -size; i <= size; i += spacing)
